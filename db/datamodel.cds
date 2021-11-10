@@ -14,7 +14,7 @@ entity myentity : managed, cuid {
     zahl1 : Integer;
     zahl2 : Integer;
     zahl3 : Integer @readonly;
-    accept: Association to one JaNein @mandatory @assert.range: [ 1, 2 ];
+    hide: Association to one JaNein @mandatory @assert.range: [ 1, 2 ];
 }
 
 entity JaNein : FragebogenCodeList {}

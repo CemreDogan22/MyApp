@@ -31,15 +31,15 @@ annotate Myservice.MyEntity with @(
     UI.HeaderInfo : {
         TypeName : '{i18n>Einzahl}',
         TypeNamePlural : '{i18n>Mehrzahl}',
-        Title : { $Type : 'UI.DataField', Value : '{i18n>datenschutz}'},
-        //Description : { $Type : 'UI.DataField', Value : '{i18n>ESSTitle}'}
+        Title : { $Type : 'UI.DataField', Value : '{i18n>appTitle}'},
+        Description : { $Type : 'UI.DataField', Value : '{i18n>appDescription}'}
     },
 
     UI.HeaderFacets : [
-        {$Type : 'UI.ReferenceFacet',Target : '@UI.FieldGroup#PatientInformation'}
+        {$Type : 'UI.ReferenceFacet',Target : '@UI.FieldGroup#Information'}
     ],
 
-    UI.FieldGroup #PatientInformation : {
+    UI.FieldGroup #Information : {
         $Type : 'UI.FieldGroupType',
         Data : [
             {
@@ -79,18 +79,17 @@ annotate Myservice.MyEntity with @(
         {
         $Type  : 'UI.ReferenceFacet',
         Label  : '{i18n>appTitle}',
-        ID     : 'Datenschutzrichtlinien',
         Target : '@UI.FieldGroup#text1'
         }        
     ],
     UI.FieldGroup#text1 : {
         Data: [
-            {Value: text1},
-            {Value: text2},
-            {Value: zahl1},
-            {Value: zahl2},
-            {Value: zahl3},
-            {Value : accept_code}         
+            {Value: text1, Label : '{i18n>text1}'},
+            {Value: text2, Label : '{i18n>text2}'},
+            {Value: zahl1, Label : '{i18n>zahl1}'},
+            {Value: zahl2, Label : '{i18n>zahl2}'},
+            {Value: zahl3, Label : '{i18n>zahl3}'},
+            {Value : hide_code, Label : '{i18n>hide}'}         
         ]
     }
 

@@ -7,8 +7,8 @@ Service Myservice {
 }
 
 annotate Myservice.MyEntity with {
-    accept @Common : {
-        Text            : accept.name,
+    hide @Common : {
+        Text            : hide.name,
         TextArrangement : #TextOnly,
         ValueListWithFixedValues
     };
