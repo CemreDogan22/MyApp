@@ -84,13 +84,24 @@ annotate Myservice.MyEntity with @(
     ],
     UI.FieldGroup#text1 : {
         Data: [
-            {Value: text1, Label : '{i18n>text1}'},
-            {Value: text2, Label : '{i18n>text2}'},
-            {Value: zahl1, Label : '{i18n>zahl1}'},
-            {Value: zahl2, Label : '{i18n>zahl2}'},
-            {Value: zahl3, Label : '{i18n>zahl3}'},
+            {Value: text1, Label : '{i18n>text1}', ![@UI.Hidden] : hidden},
+            {Value: text2, Label : '{i18n>text2}', ![@UI.Hidden] : hidden},
+            {Value: zahl1, Label : '{i18n>zahl1}', ![@UI.Hidden] : hidden},
+            {Value: zahl2, Label : '{i18n>zahl2}', ![@UI.Hidden] : hidden},
+            {Value: zahl3, Label : '{i18n>zahl3}', ![@UI.Hidden] : hidden},
             {Value : hide_code, Label : '{i18n>hide}'}         
         ]
     }
+);
 
+//SideEffects um Elemente in Echtzeit aus- bzw. einzublenden
+annotate Myservice.MyEntity with @(
+    Common.SideEffects #hidden : {
+        SourceProperties : [
+            hide_code
+        ],
+        TargetProperties : [
+            'hidden'
+        ]
+    }
 );
