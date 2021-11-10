@@ -7,14 +7,18 @@
     "private": true,
     "dependencies": {
         "@sap/cds": "^5",
+        "@sap/hana-client": "^2.10.15",
         "express": "^4",
         "hdb": "^0.18.3"
     },
     "devDependencies": {
+        "@sap/hdi-deploy": "4.2.0",
+        "@sap/ux-specification": "^1.90.13",
         "sqlite3": "^5.0.2"
     },
     "scripts": {
-        "start": "cds run"
+        "start": "cds run",
+        "undeploy": "cf undeploy MyApp --delete-services --delete-service-keys"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
@@ -53,5 +57,8 @@
                 "kind": "hana"
             }
         }
-    }
+    },
+    "sapux": [
+        "app/myapp"
+    ]
 }

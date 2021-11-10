@@ -31,3 +31,5 @@ mta_archives/
 
 # auto generated wildcard
 MyApp/db/.env
+# auto generated wildcard
+MyApp/.env1
