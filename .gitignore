@@ -30,7 +30,7 @@ mta_archives/
 # .idea
 
 # auto generated wildcard
-
+MyApp/db/.env
 # auto generated wildcard
 MyApp/.env1
 
