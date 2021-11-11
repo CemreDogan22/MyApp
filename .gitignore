@@ -33,3 +33,6 @@ mta_archives/
 MyApp/db/.env
 # auto generated wildcard
 MyApp/.env1
+
+dist/
+resources/

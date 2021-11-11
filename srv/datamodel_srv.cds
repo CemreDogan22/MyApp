@@ -1,6 +1,7 @@
 using { slah.db as slah } from '../db/datamodel';
 
-Service Myservice {
+@requires: 'authenticated-user'
+service Myservice {
     @odata.draft.enabled
     entity MyEntity as projection on slah.myentity;
 
@@ -19,4 +20,4 @@ annotate Myservice.JaNein with {
         Text : name,
         TextArrangement : #TextOnly
     }  
-};
+}; 
